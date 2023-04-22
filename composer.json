@@ -1,0 +1,39 @@
+{
+    "name": "sicet7/php-http-attribute-plugin",
+    "description": "plugin to map http attributes into the route collector in the PSR container.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sicet7\\HTTP\\Attributes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Martin René Sørensen",
+            "email": "git@sicet7.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.2",
+        "roave/better-reflection": "^6.9",
+        "sicet7/php-plugin-container": "dev-master",
+        "sicet7/php-http-utils": "dev-master",
+        "sicet7/php-http-plugin": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:sicet7/php-plugin-container.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:sicet7/php-http-plugin.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:sicet7/php-http-utils.git"
+        }
+    ]
+}

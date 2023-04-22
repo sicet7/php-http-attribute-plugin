@@ -33,9 +33,9 @@ readonly class HttpAttributeLoaderPlugin implements PluginInterface
         $source->instance(HttpAttributeLoaderPlugin::class, $this);
         $source->decorate(RouteCollectorInterface::class, function (
             RouteCollectorInterface $routeCollector,
-            HttpAttributeLoaderPlugin $plugin,
             ContainerInterface $container
         ): RouteCollectorInterface {
+            $plugin = $container->get(HttpAttributeLoaderPlugin::class);
             foreach ($plugin->reflector->reflectAllClasses() as $class) {
                 if (!$class->implementsInterface(RequestHandlerInterface::class)) {
                     continue;

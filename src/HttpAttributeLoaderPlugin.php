@@ -30,7 +30,7 @@ readonly class HttpAttributeLoaderPlugin implements PluginInterface
      */
     public function register(MutableDefinitionSourceHelper $source): void
     {
-        $source->instance(HttpAttributeLoaderPlugin::class, $this);
+        $source->value(HttpAttributeLoaderPlugin::class, $this);
         $source->decorate(RouteCollectorInterface::class, function (
             RouteCollectorInterface $routeCollector,
             ContainerInterface $container
